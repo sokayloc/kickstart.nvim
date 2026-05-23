@@ -172,6 +172,9 @@ vim.g.have_nerd_font = true
   -- See `:help 'confirm'`
   vim.o.confirm = true
 
+  -- Term gui colors for colorizer and more
+  vim.o.termguicolors = true
+
   -- [[ Basic Keymaps ]]
   --  See `:help vim.keymap.set()`
 
@@ -339,6 +342,14 @@ do
   -- and then call its `setup()` function to start it with default settings.
   vim.pack.add { gh 'NMAC427/guess-indent.nvim' }
   require('guess-indent').setup {}
+
+  -- Custom pluginsection
+
+  vim.pack.add { gh 'norcalli/nvim-colorizer.lua' }
+  require('colorizer').setup {}
+
+
+
 
   -- Because lua is a real programming language, you can also have some logic to your installation -
   -- like only installing a plugin if a condition is met.
